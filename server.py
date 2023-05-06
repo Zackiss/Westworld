@@ -11,6 +11,6 @@ def produce_gen_result(user_id, serial_num, data_prev, data):
     )
     msg = {
         f"{user_id}": f"{serial_num}",
-        f'{data_prev}': f'{data}'
+        'data_content': f'{data}'
         }
     producer.send('line_gen_topic', msg)
